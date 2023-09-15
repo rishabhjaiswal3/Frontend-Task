@@ -1,0 +1,133 @@
+.topnav {
+    background-color: black;
+    overflow: hidden;
+  }
+.top-heading{
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 275;
+    line-height: normal;   
+}
+.white-text{
+    color:white;
+    padding:10px;
+    font-weight:600;
+}
+.top-text{
+    color: #FFF;
+    height:100%;
+    text-align:right;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    font-family: Work Sans;
+    font-weight:600;
+}
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    color: white;
+  }
+  
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  .topnav .icon {
+    display: none;
+  }
+  .showPhoneItems{
+    display:none;
+  }
+  .showNotPhoneItems{
+    display:flex;
+  }
+
+  .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .dropdown:hover .dropbtn {
+    /* background-color: white; */
+    border-left:1px solid white;
+    border-right:1px solid white;
+    /* border:0px 1px 1px 1px solid white; */
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 294px;
+    color:white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {background-color: #111111;}
+  
+  .dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction:column;
+    width:fit-box;
+    background:black;
+    color:grey;
+  }
+
+  @media screen and (max-width: 600px) {
+    .topnav a{display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .showPhoneItems{
+        display:block;
+    }
+    .showNotPhoneItems{
+        display:none !important;
+        background:green;
+    }
+    .topnav.responsive {
+        position: absolute;
+        width:100vw;
+        overflow:hidden;
+        height:100vh;
+        background:black;
+        z-index:200;
+    }
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }

@@ -1,0 +1,19 @@
+.heading{
+    color: var(--Grey-scale-1000, #000);
+/* Subtitles */
+font-family: Syne;
+font-size: 26px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.normal{
+    color: var(--Greyscale-400, rgba(22, 22, 21, 0.50));
+/* Body text 14 */
+font-family: Work Sans;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+

@@ -1,0 +1,35 @@
+.footer {
+    position:absolute;
+    color: #fff; 
+    text-align: center; 
+    width: 100%; 
+}
+*{
+    font-family: 'Poppins', sans-serif;
+}
+.slick-dots {
+    display: none !important;
+  }
+.center{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:lightred ;
+}
+.text{
+    color:#626262;
+    font-weight:400;
+    font-size:10px;
+}
+.page{
+    minHeight:calc(100vh-530px);
+}
+
+@media (max-width: 576px){
+    .NotMobileScreen{
+        display:none;
+    }
+    .text{
+        font-size:10px;
+    }
+}

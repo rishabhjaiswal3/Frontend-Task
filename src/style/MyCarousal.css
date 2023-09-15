@@ -1,0 +1,20 @@
+
+.product-heading-text{
+    color: var(--Grey-scale-1000, #000);
+    /* H2 title */
+    font-family: 'Syne', sans-serif;
+    font-size: 60px;
+    font-weight: 300;
+    line-height: normal;
+    width: 669px;
+    flex-shrink: 0;
+    margin:40px 0px;
+}
+.divider{
+    background: var(--Grey-scale-1000, #000);
+}
+.arrows{
+    display:flex;
+    justify-content:flex-end;
+    padding:40px;
+}
