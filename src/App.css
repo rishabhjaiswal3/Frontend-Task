@@ -1,5 +1,5 @@
 .showOnlyInMobile {
-  display: block;
+  display: none;
 }
 .buttonIcons {
   display: flex;
@@ -10,6 +10,6 @@
 
 @media screen and (max-width: 767px) {
   .showOnlyInMobile {
-    display: none;
+    display: flex;
   }
 }

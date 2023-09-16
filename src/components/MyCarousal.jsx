@@ -60,10 +60,12 @@ const MyCarousal = () => {
             </Grid>
         </Grid>
         <Grid container>
-            {/* <Grid sm={12} md={0} lg={0} className="arrows">
-               <WestIcon style={{padding:'10px',cursor:'pointer'}} onClick={prevSlide}/>
-               <EastIcon style={{padding:'10px',cursor:'pointer'}} onClick={nextSlide}/>
-            </Grid> */}
+            <Grid sm={12} md={0} lg={0} className=" arrows" style={{width:'100%'}}>
+              <span style={{margin:'auto'}}>
+               <WestIcon style={{padding:'10px',cursor:'pointer',margin:'auto'}} onClick={prevSlide}/>
+               <EastIcon style={{padding:'10px',cursor:'pointer',margin:'auto'}} onClick={nextSlide}/>
+              </span>
+            </Grid>
         </Grid>
 
     </div>
