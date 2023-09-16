@@ -8,15 +8,8 @@ import image3 from '../assets/image3.png'
 import CarouselCard from './CarouselCard';
 
 const Carousel = ({sliderRef}) => {
-  const [currentValue, setCurrentValue] = useState(3.6);
-  const mobileMode = window.matchMedia('(max-width: 768px)');
+  const [currentValue, setCurrentValue] = useState(1);
 
-  useEffect(()=>{
-    console.log('mobile mode is',mobileMode)
-    if(mobileMode?.matches){
-      setCurrentValue(1);
-    }
-  },[mobileMode])
 
   const settings = {
     dots: true,
@@ -48,31 +41,50 @@ const Carousel = ({sliderRef}) => {
     price:'100$'
   }]
 
+  function setCarouselSize(){
+    const mobileMode = window.matchMedia('(max-width: 768px)');
+    const tabletMode = window.matchMedia('(min-width: 768px) and (max-width: 1024px)');
+    const desktopMode = window.matchMedia('(min-width: 1025px)');
+    console.log('mobile mode is',mobileMode)
+      if(mobileMode?.matches){
+        setCurrentValue(1);
+      }
+      else if(tabletMode.match){
+        setCurrentValue(2);
+      }
+      else if(desktopMode.match){
+        setCurrentValue(3.2);
+      }
+      else {
+        setCurrentValue(3.7);
+      }
+  }
+
+  useEffect(()=>{
+    setCarouselSize();
+  },[])
+  function handleResize() {
+    // Get the current window dimensions
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+  
+    console.log(`Window Width: ${windowWidth}, Window Height: ${windowHeight}`);
+    setCarouselSize();
+  }
+  
+  window.addEventListener("resize", handleResize);
+
 
   return (
-    <div>
-      <Slider {...settings} ref={sliderRef}>
+    <div >
+      <Slider {...settings} ref={sliderRef} style={{maxWidth:"99vw",width:"100%"}}>
         {
-          cards.map((card)=>{
+          cards.map((card,index)=>{
             let {image,title,details} = card;
-            return(<CarouselCard image={image} title={title} details={details}/>)
+            return(<CarouselCard  key={index} image={image} title={title} details={details}/>)
           })
         }
-        {/* <div style={{border:'1px solid green',height:'400px'}}>
-          <img src={image1} alt="Image 1" />
-          Hrlo sdfjlsdjd sad;fsal f
-          asdfj;as dflsaf;sadfsafd
-        </div>
-        <div>
-          <img src={image2} alt="Image 2" />
-        </div>
-        <div>
-          <img src={image3} alt="Image 3" />
-        </div>
-        <div>
-          <img src={image2} alt="Image 4" />
-        </div> */}
-        {/* Add more slides with images */}
+        
       </Slider>
     </div>
   );

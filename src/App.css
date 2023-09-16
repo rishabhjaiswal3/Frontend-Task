@@ -1,22 +1,15 @@
-.showOnlyInMobile{
-    display:block !important;
+.showOnlyInMobile {
+  display: block;
 }
-.buttonIcons{
-    display:flex;
-    height:100%;
-    justify-content:center !important;
-    align-items:center !important;
-}
-
-@media (max-width: 576px){
-    .showOnlyInMobile{
-        display:none !important;
-    }   
+.buttonIcons {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (min-width: 576px) and (max-width: 767px) {
-    .showOnlyInMobile{
-        display:none !important;
-    } 
+@media screen and (max-width: 767px) {
+  .showOnlyInMobile {
+    display: none;
+  }
 }
-  
